@@ -233,7 +233,7 @@ $ build/SpeedPPR -algo BUILD_INDEX \
 
 ## Approximate PPR
 
-This function answers approximate personalized PageRank queries. Given a source node *s*, for any node *t* in the graph, if the PPR *π(s, t) ≥ 1 / {\# vertices in the graph}*, it returns an estimate of *π(s, t)*, with relative error at most ε with high probability.  
+This function answers approximate personalized PageRank queries. Given a source node *s*, for any node *t* in the graph, if the PPR *π(s, t) ≥ 1 / {\# vertices in the graph}*, it returns an estimate of *π(s, t)*, with relative error at most ε with probability *1 - 1 / {\# vertices in the graph}*.  
 
 ```sh
 $ build/SpeedPPR -algo SpeedPPR \
