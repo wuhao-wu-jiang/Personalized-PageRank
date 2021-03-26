@@ -41,11 +41,11 @@ $ build/SpeedPPR -algo CLEAN_GRAPH \
     -output_folder <output-folder-path>
 ```
 
-For undirected graph, our program duplicates each un-directed edge into two directed edges. We assume that each edge appears only once in the original graph.
+For undirected graphs, our program duplicates each undirected edge into two directed edges. We assume that each edge appears only once in the original graph.
 
 ### *Example*
 
-For example, if we have an *un-directed* graph DBLP, stored in *"DataSetRaw/dblp/com-dblp.ungraph.txt"*, and we want to keep the output graph in the folder "*DataSetCleaned/dblp*", then we can run the following command.
+For example, if we have an *undirected* graph DBLP, stored in *"DataSetRaw/dblp/com-dblp.ungraph.txt"*, and we want to keep the output graph in the folder "*DataSetCleaned/dblp*", then we can run the following command.
 
 ```sh
 $ build/SpeedPPR -algo CLEAN_GRAPH \
@@ -53,7 +53,7 @@ $ build/SpeedPPR -algo CLEAN_GRAPH \
     -is_undirected yes \
     -output_folder DataSetCleaned/dblp  
 ```
-After the program finish, there should be 3 output files in "*DataSetCleaned/dblp*". 
+After the program returns, there should be 3 output files in "*DataSetCleaned/dblp*". 
 
 1. **attribute.txt** : a meta file that records the number of vertices and edges in the output graph. 
    
@@ -101,7 +101,7 @@ $ build/SpeedPPR -algo GEN_QUERY \
 
 ## Multi-thread Ground Truth  
 
-We are ready to computing the ground truth PPR for given query ids, in multi-thread. The solutions might be needed for later testing.  
+We are ready to compute the ground truth PPR for the given query ids, in multi-thread. The solutions may be needed for later testing.  
 
 ```sh
 $ build/SpeedPPR -algo GROUND_TRUTH \
@@ -115,7 +115,7 @@ $ build/SpeedPPR -algo GROUND_TRUTH \
 
 ### *Example*
 
-In this example, the solution are saved in the folder *answer/*. Create it if necessary. Also, we might need to create sub-folders *dblp/* and *web-Stanford/* under the folder *answer/*. 
+In this example, the solutions are saved in the folder *answer/*. Create such a folder if necessary. Also, we might need to create sub-folders *dblp/* and *web-Stanford/* under the folder *answer/*. 
 
 ```sh
 # crate the folder answer only if it does not exist
