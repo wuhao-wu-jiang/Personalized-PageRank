@@ -295,7 +295,7 @@ $ build/SpeedPPR -algo SpeedPPR \
     -epsilon 0.5 \
     -with_idx yes
  
-# without index web-Stanford
+# with index web-Stanford
 $ build/SpeedPPR -algo SpeedPPR \
     -meta DataSetCleaned/web-Stanford/attribute.txt \
     -graph_binary DataSetCleaned/web-Stanford/graph.bin \
@@ -311,10 +311,12 @@ $ build/SpeedPPR -algo SpeedPPR \
 ## Citation  
 
 ```c++
-@article{WGWZ21,  
-    title={Unifying the Global and Local Approaches: An Efficient Power Iteration with Forward Push},
-    author={Wu, Hao and Gan, Junhao and Wei, Zhewei and Zhang, Rui},  
-    journal={arXiv preprint arXiv:2101.03652}  
+@inproceedings{wu2021unifying,
+  title={Unifying the Global and Local Approaches: An Efficient Power Iteration with Forward Push},
+  author={Wu, Hao and Gan, Junhao and Wei, Zhewei and Zhang, Rui},
+  booktitle={Proceedings of the 2021 International Conference on Management of Data},
+  pages={1996--2008},
+  year={2021}
 }
 ```
 
